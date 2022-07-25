@@ -23,5 +23,7 @@ Data source: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/
 <ol>
 <li><a href="https://github.com/JerryJheng/portfolio/blob/main/alcohol_cons_DataExploration.sql">alcohol_cons_DataExploration.sql</a></li>
 </ol>
+<ul>
 <li><a href="https://public.tableau.com/app/profile/jerry.jheng/viz/AlcoholConsumptionDataExploration/AlcoholConsumptionByLocation">
 Visualization: Alcohol, Total per Capita Consumption (in litres of pure alcohol)</a></li>
+</ul>
