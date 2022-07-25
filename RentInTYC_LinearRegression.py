@@ -68,7 +68,7 @@ y= RentData['TotalPrice']
 x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.3,random_state = 86) 
 # Fit the regression model
 mlr=ElasticNet(alpha=0.01)
-#mlr=Ridge(alpha=10,tol=0.00001,normalize=False,solver="svd")
+#mlr=Ridge(alpha=10,tol=0.00001,solver="svd")
 #mlr= LinearRegression()
 mlr.fit(x_train,y_train)
 # Show result
