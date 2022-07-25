@@ -13,15 +13,15 @@ Import data and backup
 -- -----Import data-----
 CREATE TABLE RAW_data(
 	District TEXT, TransactionSign TEXT, Address TEXT,
-    LandAreaSquareMeter TEXT, TheUseZoning TEXT,
-    NonMetropolisLandUseDistrict TEXT, NonMetropolisLandUse TEXT,
-    TransactionDate TEXT, TransactionItemAndNumber TEXT, 
-    RentFloor TEXT, TotalFloor TEXT, BuildingState TEXT,
-    MainUse TEXT, MainBuildingMaterials TEXT, DateOfCompletion TEXT,
-    BuildingTotalArea TEXT, Room TEXT, Hall INT NULL, Toilet TEXT,
-    Compartmented TEXT, ManagingOrg TEXT, FurnitureProvided TEXT,
-    TotalPrice TEXT, NTDperM2 TEXT, BerthCategory TEXT, BerthArea TEXT,
-    BerthPrice TEXT, NOTE TEXT, SerialNum TEXT);
+    	LandAreaSquareMeter TEXT, TheUseZoning TEXT,
+    	NonMetropolisLandUseDistrict TEXT, NonMetropolisLandUse TEXT,
+    	TransactionDate TEXT, TransactionItemAndNumber TEXT, 
+    	RentFloor TEXT, TotalFloor TEXT, BuildingState TEXT,
+    	MainUse TEXT, MainBuildingMaterials TEXT, DateOfCompletion TEXT,
+    	BuildingTotalArea TEXT, Room TEXT, Hall INT NULL, Toilet TEXT,
+    	Compartmented TEXT, ManagingOrg TEXT, FurnitureProvided TEXT,
+    	TotalPrice TEXT, NTDperM2 TEXT, BerthCategory TEXT, BerthArea TEXT,
+    	BerthPrice TEXT, NOTE TEXT, SerialNum TEXT);
 -- DROP TABLE RAW_data;
 SHOW VARIABLES LIKE "secure_file_priv";
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/HPDT2020S1.csv' 
@@ -330,7 +330,8 @@ SELECT RowNum, Address, District, NonMetropolisLandUseDistrict, AgeOfBuilding,
 		TotalPrice, NTDperM2 AS PricePerSquareMeter, Socialhousing
 FROM rentintaoyuan.RentData
 WHERE 
-BuildingNum>0 AND (BuildingState !="透天厝") AND (BuildingState !="店面(店鋪)") AND (BuildingState !="辦公商業大樓") AND (BuildingState !="工廠") AND (BuildingState !="倉庫") AND (BuildingState !="廠辦")
+BuildingNum>0 AND (BuildingState !="透天厝") AND (BuildingState !="店面(店鋪)") AND (BuildingState !="辦公商業大樓") 
+AND (BuildingState !="工廠") AND (BuildingState !="倉庫") AND (BuildingState !="廠辦")
 AND (MainUse !="小型社區式日間照顧及重建服務場所") AND (MainUse!="農舍") AND (MainUse NOT LIKE"%辦公室%") AND (MainUse!="工業用"); 
 -- SELECT * FROM RentData4Corr;
 
@@ -347,17 +348,17 @@ RETURNS INT DETERMINISTIC
 BEGIN
 	DECLARE c INT;
     SELECT(CASE WHEN Charac ="中壢區" THEN 0
-		 WHEN Charac ="八德區" THEN 1
-         WHEN Charac ="大園區" THEN 2
-         WHEN Charac ="大溪區" THEN 3
-         WHEN Charac ="平鎮區" THEN 4
-         WHEN Charac ="新屋區" THEN 5
-         WHEN Charac ="桃園區" THEN 6
-         WHEN Charac ="楊梅區" THEN 7
-         WHEN Charac ="蘆竹區" THEN 8
-         WHEN Charac ="觀音區" THEN 9
-         WHEN Charac ="龍潭區" THEN 10
-         WHEN Charac ="龜山區" THEN 11
+		WHEN Charac ="八德區" THEN 1
+         	WHEN Charac ="大園區" THEN 2
+         	WHEN Charac ="大溪區" THEN 3
+         	WHEN Charac ="平鎮區" THEN 4
+         	WHEN Charac ="新屋區" THEN 5
+         	WHEN Charac ="桃園區" THEN 6
+         	WHEN Charac ="楊梅區" THEN 7
+         	WHEN Charac ="蘆竹區" THEN 8
+         	WHEN Charac ="觀音區" THEN 9
+         	WHEN Charac ="龍潭區" THEN 10
+         	WHEN Charac ="龜山區" THEN 11
     END) INTO c;
     RETURN c;
     END
@@ -377,12 +378,12 @@ RETURNS INT DETERMINISTIC
 BEGIN
 	DECLARE c INT;
     SELECT(CASE WHEN Charac ="Metropolis District" THEN 0
-		 WHEN Charac ="特定農業區" THEN 1
-         WHEN Charac ="工業區" THEN 2
-         WHEN Charac ="一般農業區" THEN 3
-         WHEN Charac ="鄉村區" THEN 4
-         WHEN Charac ="特定專用區" THEN 5
-         WHEN Charac ="山坡地保育區" THEN 6
+		WHEN Charac ="特定農業區" THEN 1
+         	WHEN Charac ="工業區" THEN 2
+         	WHEN Charac ="一般農業區" THEN 3
+         	WHEN Charac ="鄉村區" THEN 4
+         	WHEN Charac ="特定專用區" THEN 5
+         	WHEN Charac ="山坡地保育區" THEN 6
     END) INTO c;
     RETURN c;
     END
@@ -400,9 +401,9 @@ CREATE FUNCTION ynCode(Charac VARCHAR(50))
 RETURNS INT DETERMINISTIC
 BEGIN
 	DECLARE c INT;
-    SELECT(CASE WHEN Charac ="Yes" THEN 0
-		 WHEN Charac ="No" THEN 1
-         WHEN Charac ="Not Sure" THEN 2
+    SELECT(CASE WHEN Charac ="Yes" 	THEN 0
+		WHEN Charac ="No" 	THEN 1
+         	WHEN Charac ="Not Sure" THEN 2
     END) INTO c;
     RETURN c;
     END
