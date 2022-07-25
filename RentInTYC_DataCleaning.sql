@@ -6,6 +6,7 @@ https://plvr.land.moi.gov.tw/DownloadOpenData
 ====================================================================================*/
 CREATE DATABASE RentInTaoyuan;
 USE RentInTaoyuan;
+
 /*===================================================================================
 Import data and backup
 ====================================================================================*/
@@ -55,12 +56,12 @@ FROM dup WHERE row_num>1;
 
 -- -----Convert Null Characters into NULLs-----
 UPDATE RentData
-SET District = IF(LENGTH(trim(District)) <1, NULL, District),
+SET 	District = IF(LENGTH(trim(District)) <1, NULL, District),
 	TransactionSign = IF(LENGTH(trim(TransactionSign)) <1, NULL, TransactionSign),
-    Address = IF(LENGTH(trim(Address)) <1,NULL,Address),
-    LandAreaSquareMeter = IF(LENGTH(trim(LandAreaSquareMeter)) <1, NULL, LandAreaSquareMeter),
+    	Address = IF(LENGTH(trim(Address)) <1,NULL,Address),
+    	LandAreaSquareMeter = IF(LENGTH(trim(LandAreaSquareMeter)) <1, NULL, LandAreaSquareMeter),
 	TheUseZoning = IF(LENGTH(trim(TheUseZoning)) <1,NULL ,TheUseZoning),
-    NonMetropolisLandUseDistrict = IF(LENGTH(trim(NonMetropolisLandUseDistrict)) <1,NULL,NonMetropolisLandUseDistrict),
+    	NonMetropolisLandUseDistrict = IF(LENGTH(trim(NonMetropolisLandUseDistrict)) <1,NULL,NonMetropolisLandUseDistrict),
 	NonMetropolisLandUse = IF(LENGTH(trim(NonMetropolisLandUse)) <1,NULL,NonMetropolisLandUse),
 	TransactionDate = IF(LENGTH(trim(TransactionDate)) <1,NULL,TransactionDate),
 	TransactionItemAndNumber=IF(LENGTH(trim(TransactionItemAndNumber)) <1,NULL,TransactionItemAndNumber),
@@ -72,18 +73,18 @@ SET District = IF(LENGTH(trim(District)) <1, NULL, District),
 	DateOfCompletion=IF(LENGTH(trim(DateOfCompletion)) <1,NULL,DateOfCompletion),
 	BuildingTotalArea=IF(LENGTH(trim(BuildingTotalArea)) <1,NULL,BuildingTotalArea),
 	Room=IF(LENGTH(trim(Room)) <1, NULL,Room),
-    Hall=IF(LENGTH(trim(Hall)) <1, NULL,Hall),
-    Toilet=IF(LENGTH(trim(Toilet)) <1, NULL,Toilet),
-    Compartmented=IF(LENGTH(trim(Compartmented)) <1, NULL,Compartmented),
-    ManagingOrg=IF(LENGTH(trim(ManagingOrg)) <1, NULL,ManagingOrg),
-    FurnitureProvided=IF(LENGTH(trim(FurnitureProvided)) <1, NULL,FurnitureProvided),
-    TotalPrice=IF(LENGTH(trim(TotalPrice)) <1, NULL,TotalPrice),
-    NTDperM2=IF(LENGTH(trim(NTDperM2)) <1, NULL,NTDperM2),
-    BerthCategory=IF(LENGTH(trim(BerthCategory)) <1, NULL,BerthCategory),
-    BerthArea=IF(LENGTH(trim(BerthArea)) <1, NULL,BerthArea),
-    BerthPrice=IF(LENGTH(trim(BerthPrice)) <1, NULL,BerthPrice),
-    NOTE=IF(LENGTH(trim(NOTE)) <1, NULL,NOTE),
-    SerialNum=IF(LENGTH(trim(SerialNum)) <1, NULL,SerialNum)
+    	Hall=IF(LENGTH(trim(Hall)) <1, NULL,Hall),
+    	Toilet=IF(LENGTH(trim(Toilet)) <1, NULL,Toilet),
+    	Compartmented=IF(LENGTH(trim(Compartmented)) <1, NULL,Compartmented),
+    	ManagingOrg=IF(LENGTH(trim(ManagingOrg)) <1, NULL,ManagingOrg),
+    	FurnitureProvided=IF(LENGTH(trim(FurnitureProvided)) <1, NULL,FurnitureProvided),
+    	TotalPrice=IF(LENGTH(trim(TotalPrice)) <1, NULL,TotalPrice),
+    	NTDperM2=IF(LENGTH(trim(NTDperM2)) <1, NULL,NTDperM2),
+    	BerthCategory=IF(LENGTH(trim(BerthCategory)) <1, NULL,BerthCategory),
+    	BerthArea=IF(LENGTH(trim(BerthArea)) <1, NULL,BerthArea),
+    	BerthPrice=IF(LENGTH(trim(BerthPrice)) <1, NULL,BerthPrice),
+    	NOTE=IF(LENGTH(trim(NOTE)) <1, NULL,NOTE),
+    	SerialNum=IF(LENGTH(trim(SerialNum)) <1, NULL,SerialNum)
         ;
 ALTER TABLE RentData
 ADD RowNum INT;
@@ -167,15 +168,15 @@ BEGIN
 	DECLARE c INT;
     SELECT(CASE WHEN LENGTH(Charac)/3=1 
 			THEN (SELECT ChOne2Ten(Charac))
-		 WHEN LENGTH(Charac)/3 = 2 
+		WHEN LENGTH(Charac)/3 = 2 
 			THEN (SELECT (CASE WHEN LEFT(Charac,1)="十" 
-										THEN 10+(SELECT ChOne2Ten(RIGHT(Charac,1)))
-								WHEN RIGHT(Charac,1)="十"
-										THEN (SELECT (ChOne2Ten(LEFT(Charac,1))))*10
-								END ))
-         WHEN LENGTH(Charac)/3 = 3 
+						THEN 10+(SELECT ChOne2Ten(RIGHT(Charac,1)))
+					   WHEN RIGHT(Charac,1)="十"
+						THEN (SELECT (ChOne2Ten(LEFT(Charac,1))))*10
+					   END ))
+         	WHEN LENGTH(Charac)/3 = 3 
 			THEN (SELECT ChOne2Ten(Left(Charac,1)))*10+ ChOne2Ten(RIGHT(Charac,1))
-    END) INTO c;
+    		END) INTO c;
     RETURN c;
  END  //
  delimiter ;
@@ -262,9 +263,9 @@ ADD LiftOrNot TEXT;
 
 UPDATE RentData SET LiftOrNot = "Yes" WHERE BuildingState= "住宅大樓(11層含以上有電梯)";
 
-UPDATE RentData SET	LiftOrNot = "Yes" WHERE BuildingState= "華廈(10層含以下有電梯)";
+UPDATE RentData SET LiftOrNot = "Yes" WHERE BuildingState= "華廈(10層含以下有電梯)";
 
-UPDATE RentData SET	LiftOrNot = "No" WHERE BuildingState= "公寓(5樓含以下無電梯)";
+UPDATE RentData SET LiftOrNot = "No" WHERE BuildingState= "公寓(5樓含以下無電梯)";
 
 UPDATE RentData SET LiftOrNot ="Not Sure" WHERE LiftOrNot IS NULL;
 
@@ -292,19 +293,25 @@ SELECT *,RowNum, Address, District, NonMetropolisLandUseDistrict, AgeOfBuilding,
 		TotalPrice, NTDperM2 AS PricePerSquareMeter, Socialhousing
 FROM rentintaoyuan.RentData
 WHERE 
-BuildingNum>0 AND (BuildingState !="透天厝") AND (BuildingState !="店面(店鋪)") AND (BuildingState !="辦公商業大樓") AND (BuildingState !="工廠") AND (BuildingState !="倉庫") AND (BuildingState !="廠辦")
+BuildingNum>0 AND (BuildingState !="透天厝") AND (BuildingState !="店面(店鋪)") AND (BuildingState !="辦公商業大樓") 
+AND (BuildingState !="工廠") AND (BuildingState !="倉庫") AND (BuildingState !="廠辦")
 AND (MainUse !="小型社區式日間照顧及重建服務場所") AND (MainUse!="農舍") AND (MainUse NOT LIKE"%辦公室%") AND (MainUse!="工業用") 
 ;
 
 -- -----Table for correlation matrix-----
 /*
 [Code book]
-District: "中壢區" 0;"八德區" 1;"大園區" 2;"大溪區" 3;
-		  "平鎮區" 4;"新屋區" 5;"桃園區" 6;"楊梅區" 7;
-		  "蘆竹區" 8;"觀音區" 9;"龍潭區" 10;"龜山區" 11;
-UsingZone: "Metropolis District" 0"; 特定農業區" 1; "工業區" 2; 
-           "一般農業區" 3; "鄉村區" 4; "特定專用區" 5; "山坡地保育區" 6.
-Yes/No/Not Sure = 0/1/2
+
+District: 
+"中壢區" 0; "八德區" 1; "大園區" 2; "大溪區" 3;
+"平鎮區" 4; "新屋區" 5; "桃園區" 6; "楊梅區" 7;
+"蘆竹區" 8; "觀音區" 9; "龍潭區" 10; "龜山區" 11;
+
+UsingZone:
+"Metropolis District" 0"; 特定農業區" 1; "工業區" 2; 
+"一般農業區" 3; "鄉村區" 4; "特定專用區" 5; "山坡地保育區" 6.
+
+Yes/No/Not Sure =0/1/2
 */
 -- USE rentinyuan;
 -- DROP TABLE RentData4Corr;
