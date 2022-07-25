@@ -15,11 +15,16 @@ RentData = pd.read_excel ("RentData.xlsx")
 
 #=====Correlation Matrix=====
 CorrM=RentData.corr()
+#plot
+plt.rcParams['figure.figsize']=20,20
+plt.rcParams['figure.dpi'] = 72
+plt.rcParams['font.size'] = 14
 plt.rcParams.update({'font.family':'Times New Roman'})
-f, ax = plt.subplots(figsize =(9, 8))
-sns.heatmap(CorrM, ax = ax, cmap ="YlGnBu", linewidths = 0.1)
+#f, ax = plt.subplots(figsize =(5, 4))
+#sns.heatmap(CorrM, ax = ax, cmap ="YlGnBu", linewidths = 0.1)
+sns.heatmap(CorrM, cmap ="YlGnBu", annot=True)
+plt.title('Correlation Matrix for Features',fontsize=30)
 plt.show()
-
 
 #=====Feature Adjustment & Selection=====
 RentData.TransactionDate = pd.to_datetime(RentData.TransactionDate)
@@ -65,11 +70,11 @@ features=pd.concat([features,days,District,UsingZone,Lift,Socialhousing,Furnitur
 # Split data into training set/testing set
 x= features
 y= RentData['TotalPrice']
-x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.3,random_state = 86) 
+x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.25,random_state = 439) 
 # Fit the regression model
-mlr=ElasticNet(alpha=0.01)
+#mlr=ElasticNet(alpha=0.01)
 #mlr=Ridge(alpha=10,tol=0.00001,solver="svd")
-#mlr= LinearRegression()
+mlr= LinearRegression()
 mlr.fit(x_train,y_train)
 # Show result
 print("Intercept: ", mlr.intercept_)
@@ -93,10 +98,11 @@ print('Mean Absolute Error:', meanAbErr)
 print('Mean Square Error:', meanSqErr)
 print('Root Mean Square Error:', rootMeanSqErr)
 #mlr_diff.to_csv('mlr_diff.csv')
-# get importance
 
+#show feature importance
+plt.rcParams['font.size'] = 14
 (pd.Series(abs(mlr.coef_), index=x.columns)
-#   .nlargest(4)
+   .nsmallest(len(mlr.coef_))
    .plot(kind='barh')) 
-
+plt.title('Feature Importance',fontsize=30)
 plt.show()
