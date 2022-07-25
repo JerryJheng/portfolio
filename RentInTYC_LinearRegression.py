@@ -3,9 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
-from scipy.stats import norm
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LinearRegression, Ridge, ElasticNet
 import numpy as np
 from sklearn import metrics
