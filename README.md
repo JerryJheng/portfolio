@@ -1,11 +1,17 @@
 # portfolio
 <p>
 Hi, this Jerry, a 98 percent newbie in data science. <br>
-Welcome to my portfolio, which is also my road map in this discipline.
-And I'll keep learning and update it like a p(rogramming)log(?
-<br>Stay tuned!
+Welcome to my portfolio, which is also my road map in this discipline, and I'll keep learning and update it!
 <br>
-Files in this repository are named as [project_or_type]_[Content].</p>
+Perhaps like a programming-log?
+<br>
+So... Stay tuned!
+<br>
+<br>
+<font color="green">
+ ----- Files in this repository are named as [project_or_type]_[Content] -----
+</font>
+</p>
 <h2> [rent_in_TYC]: Price of Renting in Taoyuan City, Taiwan </h1>
 <p>This project was performed to predict price of renting an apartment in Taoyuan City, Taiwan, 
 using supervised machine learning techniques. 
