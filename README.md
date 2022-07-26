@@ -1,5 +1,11 @@
 # portfolio
-<p>Files in this repository are named as [project_or_type]_[Content].</p>
+<p>
+Hi, this Jerry, a 98 percent newbie in data science. <br>
+Welcome to my portfolio, which is also my road map in this discipline.
+And I'll keep learning and update it like a p(rogramming)log(?
+<br>Stay tuned!
+<br>
+Files in this repository are named as [project_or_type]_[Content].</p>
 <h2> [rent_in_TYC]: Price of Renting in Taoyuan City, Taiwan </h1>
 <p>This project was performed to predict price of renting an apartment in Taoyuan City, Taiwan, 
 using supervised machine learning techniques. 
@@ -11,7 +17,11 @@ Data source:https://plvr.land.moi.gov.tw/DownloadOpenData
 <ol>
 <li><a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_DataCleaning.sql">rent_in_TYC_DataCleaning.sql</a></li>
 <li><a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_LinearRegression.py">rent_in_TYC_LinearRegression.py</a>
- includes correlation matrix, one-hot encoding, data splitting, modeling and feature importance. 
+ Includes correlation matrix, one-hot encoding, data splitting, modeling and feature importance. 
+</li>
+<li>
+<a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_TrainWithNN.py">rent_in_TYC_TrainWithNN.py</a> 
+Data above were trained with a neural network with fully conected layers using Keras, and better predictions were obtained.
 </li>
 </ol>
 <h2>[alcohol_cons_DataExploration]: Alcohol Consumption Data Exploration</h2>
