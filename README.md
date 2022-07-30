@@ -39,5 +39,5 @@ Data source: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/
 </ol>
 <ul>
 <li><a href="https://public.tableau.com/app/profile/jerry.jheng/viz/AlcoholConsumptionDataExploration/AlcoholConsumptionByLocation">
-Visualization: Alcohol, Total per Capita Consumption (in litres of pure alcohol)</a></li>
-</ul>
+Visualization: Alcohol, Total per Capita Consumption (in litres of pure alcohol)</a></li> Data are visualized in two dashboards by using Tableau, which are: (1) View by Location, showing the alcohol consumption of different beverage types in the particular year by location and distribution of the most consumed beverage type in locations over the world; (2) View by Time, including, in the selected year, the ranking of the locations by the their consumption of particular beverage type, and the distribution of its consumption.
+</ul> 
