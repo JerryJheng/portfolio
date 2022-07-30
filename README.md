@@ -21,12 +21,13 @@ Data source:https://plvr.land.moi.gov.tw/DownloadOpenData
 <ol>
 <li><a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_DataCleaning.sql">rent_in_TYC_DataCleaning.sql</a></li>
 <li><a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_LinearRegression.py">rent_in_TYC_LinearRegression.py</a>
- Includes correlation matrix, one-hot encoding, data splitting, modeling and feature importance. 
 </li>
+Includes correlation matrix, one-hot encoding, data splitting, modeling and feature importance. 
 <li>
 <a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_TrainWithNN.py">rent_in_TYC_TrainWithNN.py</a> 
-Data above were trained with a neural network with fully conected layers using Keras, and better predictions were obtained.
+
 </li>
+ Data above were trained with a neural network with fully conected layers using Keras, and better predictions were obtained.
 </ol>
 <h2>[alcohol_cons_DataExploration]: Alcohol Consumption Data Exploration</h2>
 <p>Working with MySQL and Tableau, this project explored recorded data of alcohol consumption from the year 2011 to 2019. 
@@ -39,5 +40,7 @@ Data source: https://www.who.int/data/gho/data/indicators/indicator-details/GHO/
 </ol>
 <ul>
 <li><a href="https://public.tableau.com/app/profile/jerry.jheng/viz/AlcoholConsumptionDataExploration/AlcoholConsumptionByLocation">
-Visualization: Alcohol, Total per Capita Consumption (in litres of pure alcohol)</a></li> Data are visualized in two dashboards by using Tableau, which are: (1) View by Location, showing the alcohol consumption of different beverage types in the particular year by location and distribution of the most consumed beverage type in locations over the world; (2) View by Time, including, in the selected year, the ranking of the locations by the their consumption of particular beverage type, and the distribution of its consumption.
+Visualization: Alcohol, Total per Capita Consumption (in litres of pure alcohol)</a>
+</li> 
+Data are visualized in two dashboards by using Tableau, which are: (1) View by Location, showing the alcohol consumption of different beverage types in the particular year by location and distribution of the most consumed beverage type in locations over the world; (2) View by Time, including, in the selected year, the ranking of the locations by the their consumption of particular beverage type, and the distribution of its consumption.
 </ul> 
