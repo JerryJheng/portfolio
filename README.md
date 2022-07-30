@@ -1,14 +1,6 @@
 # portfolio
-<p>
-Hi, this Jerry, a 98 percent rookie in data science. <br>
-Welcome to my portfolio, which is also my trip in this discipline.
-In this repository, I'll keep practicing and learning new skills through applying them to topics I am curious about. 
-Perhaps it would be like a programming-log?
-<br>
-So... Stay tuned!
-<br>
-<br>
-# Files in this repository are named as [project_or_type]_[Content]
+
+<p>files in this repository are named as [project_or_type]_[Content]
 </p>
 <h2> [rent_in_TYC]: Price of Renting in Taoyuan City, Taiwan </h1>
 <p>This project was performed to predict price of renting an apartment in Taoyuan City, Taiwan, 
