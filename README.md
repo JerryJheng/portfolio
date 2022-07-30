@@ -27,7 +27,7 @@ Includes correlation matrix, one-hot encoding, data splitting, modeling and feat
 <a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_TrainWithNN.py">rent_in_TYC_TrainWithNN.py</a> 
 
 </li>
- Data above were trained with a neural network with fully conected layers using Keras, and better predictions were obtained.
+Train data above with a neural network, and a better prediction is obtained.
 </ol>
 <h2>[alcohol_cons_DataExploration]: Alcohol Consumption Data Exploration</h2>
 <p>Working with MySQL and Tableau, this project explored recorded data of alcohol consumption from the year 2011 to 2019. 
