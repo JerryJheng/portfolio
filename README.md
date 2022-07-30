@@ -1,7 +1,7 @@
 # portfolio
 <p>
 Hi, this Jerry, a 98 percent newbie in data science. <br>
-Welcome to my portfolio, which is also my road map in this discipline, and I'll keep learning and update it!
+Welcome to my portfolio, which is also my trip in this discipline, and I'll keep learning and update it!
 <br>
 Perhaps like a programming-log?
 <br>
