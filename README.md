@@ -3,8 +3,7 @@
 Hi, this Jerry, a 98 percent rookie in data science. <br>
 Welcome to my portfolio, which is also my trip in this discipline.
 In this repository, I will keep practicing and learning new skills by applying them to the topic I am interested in. 
-<br>
-And update it perhaps like a programming-log?
+Perhaps like a programming-log?
 <br>
 So... Stay tuned!
 <br>
