@@ -2,7 +2,7 @@
 
 <p>files in this repository are named as [project_or_type]_[Content]
 </p>
-<h2> [rent_in_TYC]: Price of Renting in Taoyuan City, Taiwan </h1>
+<h2> [rent_in_TYC]: Housing Rent in Taoyuan City, Taiwan </h1>
 <p>This project was performed to predict price of renting an apartment in Taoyuan City, Taiwan, 
 using supervised machine learning techniques. 
 The dataset was collected from the website of Ministry of the Interior, Taiwan.
