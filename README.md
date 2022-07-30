@@ -16,7 +16,7 @@ Data source:https://plvr.land.moi.gov.tw/DownloadOpenData
 </li>
 Includes correlation matrix, one-hot encoding, data splitting, modeling and feature importance. 
 <li>
-<a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_TrainWithNN.py">rent_in_TYC_TrainWithNN.py</a> 
+<a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_NN.py">rent_in_TYC_NN.py</a> 
 
 </li>
 Train data above with a neural network, and a better prediction is obtained.
