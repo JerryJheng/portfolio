@@ -2,8 +2,8 @@
 <p>
 Hi, this Jerry, a 98 percent rookie in data science. <br>
 Welcome to my portfolio, which is also my trip in this discipline.
-In this repository, I will keep practicing and learning new skills by applying them to the topic I am interested in. 
-Perhaps like a programming-log?
+In this repository, I'll keep practicing and learning new skills through applying them to topics I am curious about. 
+Perhaps it would be like a programming-log?
 <br>
 So... Stay tuned!
 <br>
