@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 <p>files in this repository are named as [project_or_type]_[Content]
 </p>
