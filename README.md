@@ -5,7 +5,7 @@
 <h2> [rent_in_TYC]: Price of Renting an Apartment in Taoyuan City, Taiwan </h1>
 <p>This project was performed to predict price of renting an apartment in Taoyuan City, Taiwan, 
 using supervised machine learning techniques. 
-The dataset was collected from the website of Ministry of the Interior, Taiwan.
+The dataset was collected from the website of Ministry of the Interior, Taiwan, ranging from 2020 S1 to 2022 S2.
 After data cleaning, the dataset remains 10718 observations.
 <br>
 Data source:https://plvr.land.moi.gov.tw/DownloadOpenData
