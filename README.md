@@ -2,7 +2,7 @@
 
 <p>files in this repository are named as [project_or_type]_[Content]
 </p>
-<h2> [rent_in_TYC]: Apartment Rent in Taoyuan City, Taiwan </h1>
+<h2> [rent_in_TYC] Apartment Rent in Taoyuan City, Taiwan </h1>
 <p>This project was performed to predict prices of renting an apartment in Taoyuan City, Taiwan, 
 using supervised machine learning techniques. 
 The dataset was collected from the website of Ministry of the Interior, Taiwan, ranging from 2020 S1 to 2022 S2.
@@ -21,7 +21,7 @@ Includes correlation matrix, one-hot encoding, data splitting, modeling and feat
 </li>
 Train data above with a neural network, and a better prediction is obtained.
 </ol>
-<h2>[alcohol_cons_DataExploration]: Alcohol Consumption Data Exploration</h2>
+<h2>[alcohol_cons_DataExploration] Alcohol Consumption Data Exploration</h2>
 <p>Working with MySQL and Tableau, this project explored recorded data of alcohol consumption from the year 2011 to 2019. 
 The data were collected from The Global Heath Observatory: Explore a World of Health Data, WHO.
 <br>
