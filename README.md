@@ -2,7 +2,7 @@
 
 <p>files in this repository are named as [project_or_type]_[Content]
 </p>
-<h2> [rent_in_TYC] Apartment Rent in Taoyuan City, Taiwan </h1>
+<h2> [rent_in_TYC] Apartment Rent in Taoyuan City, Taiwan </h2>
 <p>This project was performed to predict prices of renting an apartment in Taoyuan City, Taiwan, 
 using supervised machine learning techniques. 
 The dataset was collected from the website of Ministry of the Interior, Taiwan, ranging from 2020 S1 to 2022 S2.
@@ -36,3 +36,8 @@ Visualization: Alcohol, Total per Capita Consumption (in litres of pure alcohol)
 </li> 
 Data are visualized in two dashboards by using Tableau, which are: (1) View by Location, showing the alcohol consumption of different beverage types in the particular year by location and distribution of the most consumed beverage type in locations over the world; (2) View by Time, including, in the selected year, the ranking of the locations by the their consumption of particular beverage type, and the distribution of its consumption.
 </ul> 
+<h2>[res] Scripts for Research Process</h2>
+<ol>
+<li><a href="https://github.com/JerryJheng/portfolio/blob/main/res_GetDataFromRisToExcel.py">res_GetDataFromRisToExcel.py</a></li>
+<li><a href="https://github.com/JerryJheng/portfolio/blob/main/res_GetDoiFromRisToHtml.py">res_GetDoiFromRisToHtml.py</a></li>
+</ol>
