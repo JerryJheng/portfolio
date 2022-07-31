@@ -19,7 +19,7 @@ Includes correlation matrix, one-hot encoding, data splitting, modeling and feat
 <a href="https://github.com/JerryJheng/portfolio/blob/main/rent_in_TYC_NN.py">rent_in_TYC_NN.py</a> 
 
 </li>
-Train data above with a neural network, and a better prediction is obtained.
+Train a neural network with data above, and a better prediction is obtained.
 </ol>
 <h2>[alcohol_cons_DataExploration] Alcohol Consumption Data Exploration</h2>
 <p>Working with MySQL and Tableau, this project explored recorded data of alcohol consumption from the year 2011 to 2019. 
